@@ -7,7 +7,7 @@ spec:
   project: default
  
   source:
-    repoURL: https://github.com/gabrielabejarano09/pedido-app-repo
+    repoURL: https://github.com/gabrielabejarano09/pedidos-app-repo
     targetRevision: main
     path: charts/pedidos-app
     helm:
