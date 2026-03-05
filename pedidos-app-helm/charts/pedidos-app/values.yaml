@@ -35,3 +35,6 @@ db:
   primary:
     persistence:
       enabled: false
+
+ingress:
+  enabled: true
