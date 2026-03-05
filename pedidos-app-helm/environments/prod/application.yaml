@@ -7,14 +7,14 @@ spec:
   project: default
  
   source:
-    repoURL: https://github.com/gabrielabejarano09/pedido-app-helm
+    repoURL: https://github.com/gabrielabejarano09/pedido-app-repo
     targetRevision: main
     path: charts/pedidos-app
     helm:
       valueFiles:
         - values.yaml
         - values-prod.yaml
- 
+        - values-secret.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: pedidos-prod
