@@ -1,0 +1,19 @@
+backend:
+  replicaCount: 1
+
+frontend:
+  replicaCount: 1
+  image:
+    tag: "dev"
+
+db:
+  auth:
+    existingSecret: pedidos-dev-db-secret
+  primary:
+    persistence:
+      enabled: false
+
+ingress:
+  enabled: false
+
+

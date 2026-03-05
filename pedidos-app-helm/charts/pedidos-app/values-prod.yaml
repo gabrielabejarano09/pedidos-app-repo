@@ -1,0 +1,16 @@
+backend:
+  replicaCount: 3
+
+frontend:
+  replicaCount: 2
+
+db:
+  auth:
+    existingSecret: pedidos-prod-db-secret
+  primary:
+    persistence:
+      enabled: true
+      size: 10Gi
+
+ingress:
+  enabled: true
