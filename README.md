@@ -68,7 +68,43 @@ La arquitectura implementada es la siguiente:
                                       │   + PersistentVolumeClaim  │
                                       └────────────────────────────┘
 ````
+
+## Sistema de Despliegue
  
+El sistema de despliegue implementado es el siguiente:
+
+```text
+                     ┌────────────────────────────┐
+                     │        Git Repository      │
+                     │                            │
+                     │  Helm Chart + Values       │
+                     │  environments/dev          │
+                     │  environments/prod         │
+                     └──────────────┬─────────────┘
+                                    │
+                                    │ GitOps
+                                    ▼
+                     ┌────────────────────────────┐
+                     │           ArgoCD           │
+                     │                            │
+                     │   Observa cambios en Git   │
+                     │   Sincroniza el cluster    │
+                     └──────────────┬─────────────┘
+                                    │
+                                    ▼
+                     ┌────────────────────────────┐
+                     │      Kubernetes Cluster    │
+                     │                            │
+                     │  Helm chart desplegado     │
+                     │                            │
+                     │  ├─ Frontend Deployment    │
+                     │  ├─ Backend Deployment     │
+                     │  ├─ PostgreSQL             │
+                     │  ├─ Services               │
+                     │  ├─ Ingress                │
+                     │  └─ Secrets / ConfigMaps   │
+                     └────────────────────────────┘
+````
 ### Flujo de la aplicación
  
 1. El usuario accede al **frontend**.
