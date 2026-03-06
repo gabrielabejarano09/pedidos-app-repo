@@ -2,7 +2,7 @@ backend:
   replicaCount: 3
 
 frontend:
-  replicaCount: 2
+  replicaCount: 3
 
 db:
   auth:
