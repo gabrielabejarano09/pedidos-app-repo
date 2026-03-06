@@ -1,5 +1,5 @@
 # Sistema de Gestión de Pedidos – Helm + ArgoCD
- 
+## Gabriela Bejarano, Isabela Diaz
 Este repositorio contiene la infraestructura necesaria para desplegar una aplicación completa de gestión de pedidos compuesta por base de datos, backend y frontend, usando Helm para empaquetado y ArgoCD para entrega continua. El proyecto cumple con la estructura solicitada en el parcial: chart de Helm con PostgreSQL como dependencia, recursos Kubernetes obligatorios e integración con ArgoCD para los entornos dev y prod. :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}
  
 ## Componentes de la solución
